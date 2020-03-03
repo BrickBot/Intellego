@@ -1,0 +1,2 @@
+default:	
+	../util/build.sh

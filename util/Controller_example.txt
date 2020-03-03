@@ -1,0 +1,68 @@
+
+class Controller example
+{
+	// the robot associated with this controller
+	private AbstractRobot robot;	
+	
+	// controller currently running flag
+	private boolean running;
+	
+	// sensors array, defines the type of sensors used by this controller		
+	private int[] sensors={	Controller.SENSOR_TYPE_LIGHT,
+					Controller.SENSOR_TYPE_LIGHT,
+					Controller.SENSOR_TYPE_LIGHT};
+	
+	/**
+	* Initialises the controller
+	*/
+	public void initController(AbstractRobot r)
+	{
+		robot=r;
+	}
+	
+	/**
+	* Returns this controller's sensor array
+	*/
+	public int[] getSensors()
+	{
+		return sensors;
+	}
+	
+	/**
+	* Stops the controller running 
+	*/
+	public void halt()
+	{
+		// set running to false, this will force run() to return, 
+		// and therefore stop the controller's thread
+		running=false;
+		
+		// stop the robot also
+		robot.stopMoving();
+	}
+	
+	/**
+	* Returns the robot asscoiated with this controller
+	*/
+	public AbstractRobot getRobot()
+	{
+		return robot;
+	}
+	
+	/**
+	* Main control methods, this will be called, either when the 
+	* RUN button is pressed on the real RCX, or when the simulation
+	* is started up.
+	*/
+	public void run()
+	{
+		// set running to true
+		running=true;
+		
+		// loop continuously while running
+		while (running)
+		{
+			// INSERT YOUR CODE HERE
+		}
+	}
+}

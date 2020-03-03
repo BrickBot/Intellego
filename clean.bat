@@ -1,0 +1,9 @@
+DEL *.class
+DEL controllers\*.class
+DEL hybrid\*.class
+DEL interfaces\*.class
+DEL main\*.class
+DEL real\*.class
+DEL simworldobjects\*.class
+DEL simworlds\*.class
+DEL util\*.class
